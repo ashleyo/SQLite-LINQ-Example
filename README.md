@@ -33,3 +33,4 @@ All the following comments relate to ```program.cs```
 1. Iterate over the variable (which is effectively an in-memory table as it is the result of a query) and print out the data. Notice the use of `var` to avoid monstrous type names and notice that the attribute names of the elements are as defined in our query.
 
 
+NB You will get dire warning about not embedding your connection string in your source code. You can ignore these. The reason for the warnings is security - typically databases are on servers that we access over a network, credentials are required, username/password or an API key and these get passed as part of the connection string. So connection strings are sensitive. However, an SQLite database does not even *have* a password so in this case we do not care.
